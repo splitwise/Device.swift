@@ -53,12 +53,18 @@ private extension DeviceType {
 
         case .iPhoneSEGen2: return ["iPhone12,8"]
 
+        case .iPhone12Mini: return ["iPhone13,1"]
+        case .iPhone12: return ["iPhone13,2"]
+        case .iPhone12Pro: return ["iPhone13,3"]
+        case .iPhone12ProMax: return ["iPhone13,4"]
+
         case .iPodTouch1G: return ["iPod1,1"]
         case .iPodTouch2G: return ["iPod2,1"]
         case .iPodTouch3G: return ["iPod3,1"]
         case .iPodTouch4G: return ["iPod4,1"]
         case .iPodTouch5G: return ["iPod5,1"]
         case .iPodTouch6G: return ["iPod7,1"]
+        case .iPodTouch7G: return ["iPod9,1"]
 
         case .iPad: return ["iPad1,1", "iPad1,2"]
         case .iPad2: return ["iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4"]
@@ -66,16 +72,25 @@ private extension DeviceType {
         case .iPad4: return ["iPad3,4", "iPad3,5", "iPad3,6"]
         case .iPad5: return ["iPad6,11", "iPad6,12"]
         case .iPad6: return ["iPad7,5", "iPad7,6"]
+        case .iPad7: return ["iPad7,11", "iPad7,12"]
+        case .iPad8: return ["iPad11,6", "iPad11,7"]
         case .iPadMini: return ["iPad2,5", "iPad2,6", "iPad2,7"]
         case .iPadMiniRetina: return ["iPad4,4", "iPad4,5", "iPad4,6"]
         case .iPadMini3: return ["iPad4,7", "iPad4,8", "iPad4,9"]
         case .iPadMini4: return ["iPad5,1", "iPad5,2"]
+        case .iPadMini5: return ["iPad11,1", "iPad11,2"]
         case .iPadAir: return ["iPad4,1", "iPad4,2", "iPad4,3"]
         case .iPadAir2: return ["iPad5,3", "iPad5,4"]
-        case .iPadPro9Inch: return ["iPad6,3", "iPad6,4"]
+        case .iPadAir3: return ["iPad11,3", "iPad11,4"]
+        case .iPadAir4: return ["iPad13,1", "iPad13,2"]
+        case .iPadPro9p7Inch: return ["iPad6,3", "iPad6,4"]
         case .iPadPro10p5Inch: return ["iPad7,3", "iPad7,4"]
         case .iPadPro11Inch: return ["iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4"]
-        case .iPadPro12Inch: return ["iPad6,7", "iPad6,8", "iPad7,1", "iPad7,2", "iPad8,5", "iPad8,6", "iPad8,7", "iPad8,8"]
+        case .iPadPro11Inch2: return ["iPad8,9", "iPad8,10"]
+        case .iPadPro12p9Inch: return ["iPad6,7", "iPad6,8"]
+        case .iPadPro12p9Inch2: return ["iPad7,1", "iPad7,2"]
+        case .iPadPro12p9Inch3: return ["iPad8,5", "iPad8,6", "iPad8,7", "iPad8,8"]
+        case .iPadPro12p9Inch4: return ["iPad8,11", "iPad8,12"]
         }
     }
 }
@@ -156,7 +171,7 @@ class DeviceTests: XCTestCase {
     }
 
     func testDeviceTypeAllCases() {
-        XCTAssertEqual(DeviceType.allCases.count, 49)
+        XCTAssertEqual(DeviceType.allCases.count, 63)
         
         for type in DeviceType.allCases {
             XCTAssertFalse(type.displayName.isEmpty)
