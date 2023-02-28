@@ -65,6 +65,11 @@ public enum DeviceType: String, CaseIterable {
 
     case iPhoneSEGen3
 
+    case iPhone14
+    case iPhone14Plus
+    case iPhone14Pro
+    case iPhone14ProMax
+
     case iPodTouch1G
     case iPodTouch2G
     case iPodTouch3G
@@ -82,6 +87,7 @@ public enum DeviceType: String, CaseIterable {
     case iPad7
     case iPad8
     case iPad9
+    case iPad10
 
     case iPadMini
     case iPadMiniRetina
@@ -102,12 +108,14 @@ public enum DeviceType: String, CaseIterable {
     case iPadPro11Inch
     case iPadPro11Inch2
     case iPadPro11Inch3
+    case iPadPro11Inch4
 
     case iPadPro12p9Inch
     case iPadPro12p9Inch2
     case iPadPro12p9Inch3
     case iPadPro12p9Inch4
     case iPadPro12p9Inch5
+    case iPadPro12p9Inch6
 
     case simulator
     case notAvailable
@@ -173,6 +181,10 @@ public enum DeviceType: String, CaseIterable {
         case .iPhone13Pro: return "iPhone 13 Pro"
         case .iPhone13ProMax: return "iPhone 13 Pro Max"
         case .iPhoneSEGen3: return "iPhone SE (3rd generation)"
+        case .iPhone14: return "iPhone 14"
+        case .iPhone14Plus: return "iPhone 14 Plus"
+        case .iPhone14Pro: return "iPhone 14 Pro"
+        case .iPhone14ProMax: return "iPhone 14 Pro Max"
 
         case .iPodTouch1G: return "iPod Touch"
         case .iPodTouch2G: return "iPod Touch (2nd generation)"
@@ -191,6 +203,7 @@ public enum DeviceType: String, CaseIterable {
         case .iPad7: return "iPad (7th generation)"
         case .iPad8: return "iPad (8th generation)"
         case .iPad9: return "iPad (9th generation)"
+        case .iPad10: return "iPad (10th generation)"
 
         case .iPadMini: return "iPad Mini"
         case .iPadMiniRetina: return "iPad Mini Retina"
@@ -207,14 +220,18 @@ public enum DeviceType: String, CaseIterable {
 
         case .iPadPro9p7Inch: return "iPad Pro (9.7-inch)"
         case .iPadPro10p5Inch: return "iPad Pro (10.5-inch)"
+
         case .iPadPro11Inch: return "iPad Pro (11-inch)"
         case .iPadPro11Inch2: return "iPad Pro (11-inch) (2nd generation)"
         case .iPadPro11Inch3: return "iPad Pro (11-inch) (3rd generation)"
+        case .iPadPro11Inch4: return "iPad Pro (11-inch) (4th generation)"
+
         case .iPadPro12p9Inch: return "iPad Pro (12.9-inch)"
         case .iPadPro12p9Inch2: return "iPad Pro (12.9-inch) (2nd generation)"
         case .iPadPro12p9Inch3: return "iPad Pro (12.9-inch) (3rd generation)"
         case .iPadPro12p9Inch4: return "iPad Pro (12.9-inch) (4th generation)"
         case .iPadPro12p9Inch5: return "iPad Pro (12.9-inch) (5th generation)"
+        case .iPadPro12p9Inch6: return "iPad Pro (12.9-inch) (6th generation)"
 
         case .simulator: return "Simulator"
         case .notAvailable: return "Not Available"
@@ -262,6 +279,10 @@ public enum DeviceType: String, CaseIterable {
         case .iPhone13Pro: return ["iPhone14,2"]
         case .iPhone13ProMax: return ["iPhone14,3"]
         case .iPhoneSEGen3: return ["iPhone14,6"]
+        case .iPhone14: return ["iPhone14,7"]
+        case .iPhone14Plus: return ["iPhone14,8"]
+        case .iPhone14Pro: return ["iPhone15,2"]
+        case .iPhone14ProMax: return ["iPhone15,3"]
 
         case .iPodTouch1G: return ["iPod1,1"]
         case .iPodTouch2G: return ["iPod2,1"]
@@ -280,6 +301,7 @@ public enum DeviceType: String, CaseIterable {
         case .iPad7: return ["iPad7,11", "iPad7,12"]
         case .iPad8: return ["iPad11,6", "iPad11,7"]
         case .iPad9: return ["iPad12,1", "iPad12,2"]
+        case .iPad10: return ["iPad13,18", "iPad13,19"]
 
         case .iPadMini: return ["iPad2,5", "iPad2,6", "iPad2,7"]
         case .iPadMiniRetina: return ["iPad4,4", "iPad4,5", "iPad4,6"]
@@ -296,14 +318,18 @@ public enum DeviceType: String, CaseIterable {
 
         case .iPadPro9p7Inch: return ["iPad6,3", "iPad6,4"]
         case .iPadPro10p5Inch: return ["iPad7,3", "iPad7,4"]
+
         case .iPadPro11Inch: return ["iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4"]
         case .iPadPro11Inch2: return ["iPad8,9", "iPad8,10"]
         case .iPadPro11Inch3: return ["iPad13,4", "iPad13,5", "iPad13,6", "iPad13,7"]
+        case .iPadPro11Inch4: return ["iPad14,3", "iPad14,4"]
+
         case .iPadPro12p9Inch: return ["iPad6,7", "iPad6,8"]
         case .iPadPro12p9Inch2: return ["iPad7,1", "iPad7,2"]
         case .iPadPro12p9Inch3: return ["iPad8,5", "iPad8,6", "iPad8,7", "iPad8,8"]
         case .iPadPro12p9Inch4: return ["iPad8,11", "iPad8,12"]
         case .iPadPro12p9Inch5: return ["iPad13,8", "iPad13,9", "iPad13,10", "iPad13,11"]
+        case .iPadPro12p9Inch6: return ["iPad14,5", "iPad14,6"]
         }
     }
 
