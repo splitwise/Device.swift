@@ -16,7 +16,7 @@ private extension DeviceType {
 
         switch self {
         case .notAvailable: return []
-        case .simulator: return ["i386", "x86_64"]
+        case .simulator: return ["i386", "x86_64", "arm64"]
 
         case .iPhone2G: return ["iPhone1,1"]
         case .iPhone3G: return ["iPhone1,2"]
@@ -91,13 +91,30 @@ private extension DeviceType {
         case .iPadPro12p9Inch2: return ["iPad7,1", "iPad7,2"]
         case .iPadPro12p9Inch3: return ["iPad8,5", "iPad8,6", "iPad8,7", "iPad8,8"]
         case .iPadPro12p9Inch4: return ["iPad8,11", "iPad8,12"]
+        case .iPhone13Mini: return ["iPhone14,4"]
+        case .iPhone13: return ["iPhone14,5"]
+        case .iPhone13Pro: return ["iPhone14,2"]
+        case .iPhone13ProMax: return ["iPhone14,3"]
+        case .iPhoneSEGen3: return ["iPhone14,6"]
+        case .iPhone14: return ["iPhone14,7"]
+        case .iPhone14Plus: return ["iPhone14,8"]
+        case .iPhone14Pro: return ["iPhone15,2"]
+        case .iPhone14ProMax: return ["iPhone15,3"]
+        case .iPad9: return ["iPad12,1", "iPad12,2"]
+        case .iPad10: return ["iPad13,18", "iPad13,19"]
+        case .iPadMini6: return ["iPad14,1", "iPad14,2"]
+        case .iPadAir5: return ["iPad13,16", "iPad13,17"]
+        case .iPadPro11Inch3: return ["iPad13,4", "iPad13,5", "iPad13,6", "iPad13,7"]
+        case .iPadPro11Inch4: return ["iPad14,3", "iPad14,4"]
+        case .iPadPro12p9Inch5: return ["iPad13,8", "iPad13,9", "iPad13,10", "iPad13,11"]
+        case .iPadPro12p9Inch6: return ["iPad14,5", "iPad14,6"]
         }
     }
 }
 
 class DeviceTests: XCTestCase {
 
-    let simulatorTypes: [String] = ["i386", "x86_64"]
+    let simulatorTypes: [String] = ["i386", "x86_64", "arm64"]
 
     let iPhoneTypes: [String] = {
         return ["iPhone1,1", "iPhone1,2", "iPhone2,1", "iPhone3,1", "iPhone3,1", "iPhone3,2",
@@ -171,8 +188,8 @@ class DeviceTests: XCTestCase {
     }
 
     func testDeviceTypeAllCases() {
-        XCTAssertEqual(DeviceType.allCases.count, 63)
-        
+        XCTAssertEqual(DeviceType.allCases.count, 80)
+
         for type in DeviceType.allCases {
             XCTAssertFalse(type.displayName.isEmpty)
             XCTAssertEqual(type.identifiers, type.testIdentifiers)
