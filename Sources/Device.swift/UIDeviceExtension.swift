@@ -243,7 +243,7 @@ public enum DeviceType: String, CaseIterable {
 
         switch self {
         case .notAvailable: return []
-        case .simulator: return ["i386", "x86_64"]
+        case .simulator: return ["i386", "x86_64", "arm64"]
 
         case .iPhone2G: return ["iPhone1,1"]
         case .iPhone3G: return ["iPhone1,2"]

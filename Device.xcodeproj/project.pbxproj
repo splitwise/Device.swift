@@ -30,7 +30,7 @@
 		8FBDE89F1B5CFA1C00C78486 /* DeviceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeviceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FBDE8A41B5CFA1C00C78486 /* DeviceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTests.swift; sourceTree = "<group>"; };
 		8FBDE8A61B5CFA1C00C78486 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8FBDE8AF1B5CFC1300C78486 /* UIDeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
+		8FBDE8AF1B5CFC1300C78486 /* UIDeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIDeviceExtension.swift; path = ../Sources/Device.swift/UIDeviceExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

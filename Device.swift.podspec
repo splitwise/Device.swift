@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.homepage                    = 'https://github.com/schickling/Device.swift'
   s.source                      = { :git => 'https://github.com/schickling/Device.swift.git', :tag => s.version.to_s }
 
-  s.source_files                = 'Device/**/*.{swift}'
+  s.source_files                = 'Sources/Device.swift/**/*.{swift}'
   s.ios.deployment_target       = '8.0'
   s.frameworks                  = 'UIKit'
   s.requires_arc                = true
