@@ -106,6 +106,8 @@ public enum DeviceType: String, CaseIterable {
     case iPadAir3
     case iPadAir4
     case iPadAir5
+    case iPadAir11InchM2
+    case iPadAir13InchM2
 
     case iPadPro9p7Inch
     case iPadPro10p5Inch
@@ -121,6 +123,8 @@ public enum DeviceType: String, CaseIterable {
     case iPadPro12p9Inch4
     case iPadPro12p9Inch5
     case iPadPro12p9Inch6
+    case iPadPro11InchM4
+    case iPadPro13InchM4
 
     case simulator
     case notAvailable
@@ -225,6 +229,8 @@ public enum DeviceType: String, CaseIterable {
         case .iPadAir3: "iPad Air (3rd generation)"
         case .iPadAir4: "iPad Air (4th generation)"
         case .iPadAir5: "iPad Air (5th generation)"
+        case .iPadAir11InchM2: "iPad Air 11-inch (M2)"
+        case .iPadAir13InchM2: "iPad Air 13-inch (M2)"
 
         case .iPadPro9p7Inch: "iPad Pro (9.7-inch)"
         case .iPadPro10p5Inch: "iPad Pro (10.5-inch)"
@@ -240,6 +246,8 @@ public enum DeviceType: String, CaseIterable {
         case .iPadPro12p9Inch4: "iPad Pro (12.9-inch) (4th generation)"
         case .iPadPro12p9Inch5: "iPad Pro (12.9-inch) (5th generation)"
         case .iPadPro12p9Inch6: "iPad Pro (12.9-inch) (6th generation)"
+        case .iPadPro11InchM4: "iPad Pro 11-inch (M4)"
+        case .iPadPro13InchM4: "iPad Pro 13-inch (M4)"
 
         case .simulator: "Simulator"
         case .notAvailable: "Not Available"
@@ -327,6 +335,8 @@ public enum DeviceType: String, CaseIterable {
         case .iPadAir3: ["iPad11,3", "iPad11,4"]
         case .iPadAir4: ["iPad13,1", "iPad13,2"]
         case .iPadAir5: ["iPad13,16", "iPad13,17"]
+        case .iPadAir11InchM2: ["iPad14,8", "iPad14,9"]
+        case .iPadAir13InchM2: ["iPad14,10", "iPad14,11"]
 
         case .iPadPro9p7Inch: ["iPad6,3", "iPad6,4"]
         case .iPadPro10p5Inch: ["iPad7,3", "iPad7,4"]
@@ -342,6 +352,8 @@ public enum DeviceType: String, CaseIterable {
         case .iPadPro12p9Inch4: ["iPad8,11", "iPad8,12"]
         case .iPadPro12p9Inch5: ["iPad13,8", "iPad13,9", "iPad13,10", "iPad13,11"]
         case .iPadPro12p9Inch6: ["iPad14,5", "iPad14,6"]
+        case .iPadPro11InchM4: ["iPad16,3", "iPad16,4"]
+        case .iPadPro13InchM4: ["iPad16,5", "iPad16,6"]
         }
     }
 
