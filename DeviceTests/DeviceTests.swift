@@ -112,6 +112,10 @@ private extension DeviceType {
         case .iPadPro11Inch4: ["iPad14,3", "iPad14,4"]
         case .iPadPro12p9Inch5: ["iPad13,8", "iPad13,9", "iPad13,10", "iPad13,11"]
         case .iPadPro12p9Inch6: ["iPad14,5", "iPad14,6"]
+        case .iPadPro11InchM4: ["iPad16,3", "iPad16,4"]
+        case .iPadPro13InchM4: ["iPad16,5", "iPad16,6"]
+        case .iPadAir11InchM2: ["iPad14,8", "iPad14,9"]
+        case .iPadAir13InchM2: ["iPad14,10", "iPad14,11"]
         }
     }
 }
@@ -147,7 +151,8 @@ class DeviceTests: XCTestCase {
                 "iPad12,1", "iPad12,2", "iPad13,18", "iPad13,19", "iPad14,1", "iPad14,2",
                 "iPad13,16", "iPad13,17", "iPad13,4", "iPad13,5", "iPad13,6", "iPad13,7",
                 "iPad14,3", "iPad14,4", "iPad13,8", "iPad13,9", "iPad13,10", "iPad13,11",
-                "iPad14,5", "iPad14,6"]
+                "iPad14,5", "iPad14,6", "iPad16,3", "iPad16,4", "iPad16,5", "iPad16,6",
+                "iPad14,8", "iPad14,9", "iPad14,10", "iPad14,11"]
     }
 
     func testCurrentDevice() {
@@ -189,7 +194,7 @@ class DeviceTests: XCTestCase {
     }
 
     func testDeviceTypeAllCases() {
-        XCTAssertEqual(DeviceType.allCases.count, 84)
+        XCTAssertEqual(DeviceType.allCases.count, 88)
 
         for type in DeviceType.allCases {
             XCTAssertFalse(type.displayName.isEmpty)
