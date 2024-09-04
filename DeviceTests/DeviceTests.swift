@@ -58,6 +58,23 @@ private extension DeviceType {
         case .iPhone12Pro: ["iPhone13,3"]
         case .iPhone12ProMax: ["iPhone13,4"]
 
+        case .iPhone13Mini: ["iPhone14,4"]
+        case .iPhone13: ["iPhone14,5"]
+        case .iPhone13Pro: ["iPhone14,2"]
+        case .iPhone13ProMax: ["iPhone14,3"]
+
+        case .iPhoneSEGen3: ["iPhone14,6"]
+
+        case .iPhone14: ["iPhone14,7"]
+        case .iPhone14Plus: ["iPhone14,8"]
+        case .iPhone14Pro: ["iPhone15,2"]
+        case .iPhone14ProMax: ["iPhone15,3"]
+
+        case .iPhone15: ["iPhone15,4"]
+        case .iPhone15Plus: ["iPhone15,5"]
+        case .iPhone15Pro: ["iPhone16,1"]
+        case .iPhone15ProMax: ["iPhone16,2"]
+
         case .iPodTouch1G: ["iPod1,1"]
         case .iPodTouch2G: ["iPod2,1"]
         case .iPodTouch3G: ["iPod3,1"]
@@ -91,19 +108,7 @@ private extension DeviceType {
         case .iPadPro12p9Inch2: ["iPad7,1", "iPad7,2"]
         case .iPadPro12p9Inch3: ["iPad8,5", "iPad8,6", "iPad8,7", "iPad8,8"]
         case .iPadPro12p9Inch4: ["iPad8,11", "iPad8,12"]
-        case .iPhone13Mini: ["iPhone14,4"]
-        case .iPhone13: ["iPhone14,5"]
-        case .iPhone13Pro: ["iPhone14,2"]
-        case .iPhone13ProMax: ["iPhone14,3"]
-        case .iPhoneSEGen3: ["iPhone14,6"]
-        case .iPhone14: ["iPhone14,7"]
-        case .iPhone14Plus: ["iPhone14,8"]
-        case .iPhone14Pro: ["iPhone15,2"]
-        case .iPhone14ProMax: ["iPhone15,3"]
-        case .iPhone15: ["iPhone15,4"]
-        case .iPhone15Plus: ["iPhone15,5"]
-        case .iPhone15Pro: ["iPhone16,1"]
-        case .iPhone15ProMax: ["iPhone16,2"]
+
         case .iPad9: ["iPad12,1", "iPad12,2"]
         case .iPad10: ["iPad13,18", "iPad13,19"]
         case .iPadMini6: ["iPad14,1", "iPad14,2"]
@@ -112,6 +117,7 @@ private extension DeviceType {
         case .iPadPro11Inch4: ["iPad14,3", "iPad14,4"]
         case .iPadPro12p9Inch5: ["iPad13,8", "iPad13,9", "iPad13,10", "iPad13,11"]
         case .iPadPro12p9Inch6: ["iPad14,5", "iPad14,6"]
+
         case .iPadPro11InchM4: ["iPad16,3", "iPad16,4"]
         case .iPadPro13InchM4: ["iPad16,5", "iPad16,6"]
         case .iPadAir11InchM2: ["iPad14,8", "iPad14,9"]
