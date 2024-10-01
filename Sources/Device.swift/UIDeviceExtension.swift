@@ -75,6 +75,11 @@ public enum DeviceType: String, CaseIterable {
     case iPhone15Pro
     case iPhone15ProMax
 
+    case iPhone16
+    case iPhone16Plus
+    case iPhone16Pro
+    case iPhone16ProMax
+
     case iPodTouch1G
     case iPodTouch2G
     case iPodTouch3G
@@ -197,6 +202,10 @@ public enum DeviceType: String, CaseIterable {
         case .iPhone15Plus: "iPhone 15 Plus"
         case .iPhone15Pro: "iPhone 15 Pro"
         case .iPhone15ProMax: "iPhone 15 Pro Max"
+        case .iPhone16: "iPhone 16"
+        case .iPhone16Plus: "iPhone 16 Plus"
+        case .iPhone16Pro: "iPhone 16 Pro"
+        case .iPhone16ProMax: "iPhone 16 Pro Max"
 
         case .iPodTouch1G: "iPod Touch"
         case .iPodTouch2G: "iPod Touch (2nd generation)"
@@ -303,6 +312,10 @@ public enum DeviceType: String, CaseIterable {
         case .iPhone15Plus: ["iPhone15,5"]
         case .iPhone15Pro: ["iPhone16,1"]
         case .iPhone15ProMax: ["iPhone16,2"]
+        case .iPhone16: ["iPhone17,3"]
+        case .iPhone16Plus: ["iPhone17,4"]
+        case .iPhone16Pro: ["iPhone17,1"]
+        case .iPhone16ProMax: ["iPhone17,2"]
 
         case .iPodTouch1G: ["iPod1,1"]
         case .iPodTouch2G: ["iPod2,1"]
