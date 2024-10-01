@@ -75,6 +75,11 @@ private extension DeviceType {
         case .iPhone15Pro: ["iPhone16,1"]
         case .iPhone15ProMax: ["iPhone16,2"]
 
+        case .iPhone16: ["iPhone17,3"]
+        case .iPhone16Plus: ["iPhone17,4"]
+        case .iPhone16Pro: ["iPhone17,1"]
+        case .iPhone16ProMax: ["iPhone17,2"]
+
         case .iPodTouch1G: ["iPod1,1"]
         case .iPodTouch2G: ["iPod2,1"]
         case .iPodTouch3G: ["iPod3,1"]
@@ -139,7 +144,7 @@ class DeviceTests: XCTestCase {
                 "iPhone12,3", "iPhone12,5", "iPhone12,8", "iPhone13,1", "iPhone13,2", "iPhone13,3",
                 "iPhone13,4", "iPhone14,4", "iPhone14,5", "iPhone14,2", "iPhone14,3", "iPhone14,6",
                 "iPhone14,7", "iPhone14,8", "iPhone15,2", "iPhone15,3", "iPhone15,4", "iPhone15,5",
-                "iPhone16,1", "iPhone16,2"]
+                "iPhone16,1", "iPhone16,2", "iPhone17,1", "iPhone17,2", "iPhone17,3", "iPhone17,4"]
     }()
 
     let iPodTypes: [String] = {
@@ -200,7 +205,7 @@ class DeviceTests: XCTestCase {
     }
 
     func testDeviceTypeAllCases() {
-        XCTAssertEqual(DeviceType.allCases.count, 88)
+        XCTAssertEqual(DeviceType.allCases.count, 92)
 
         for type in DeviceType.allCases {
             XCTAssertFalse(type.displayName.isEmpty)
