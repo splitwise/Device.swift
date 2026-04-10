@@ -79,6 +79,12 @@ private extension DeviceType {
         case .iPhone16Plus: ["iPhone17,4"]
         case .iPhone16Pro: ["iPhone17,1"]
         case .iPhone16ProMax: ["iPhone17,2"]
+        case .iPhone16e: ["iPhone17,5"]
+        case .iPhone17: ["iPhone18,3"]
+        case .iPhoneAir: ["iPhone18,4"]
+        case .iPhone17Pro: ["iPhone18,1"]
+        case .iPhone17ProMax: ["iPhone18,2"]
+        case .iPhone17e: ["iPhone18,5"]
 
         case .iPodTouch1G: ["iPod1,1"]
         case .iPodTouch2G: ["iPod2,1"]
@@ -116,7 +122,9 @@ private extension DeviceType {
 
         case .iPad9: ["iPad12,1", "iPad12,2"]
         case .iPad10: ["iPad13,18", "iPad13,19"]
+        case .iPad11: ["iPad15,7", "iPad15,8"]
         case .iPadMini6: ["iPad14,1", "iPad14,2"]
+        case .iPadMini7: ["iPad16,1", "iPad16,2"]
         case .iPadAir5: ["iPad13,16", "iPad13,17"]
         case .iPadPro11Inch3: ["iPad13,4", "iPad13,5", "iPad13,6", "iPad13,7"]
         case .iPadPro11Inch4: ["iPad14,3", "iPad14,4"]
@@ -125,8 +133,14 @@ private extension DeviceType {
 
         case .iPadPro11InchM4: ["iPad16,3", "iPad16,4"]
         case .iPadPro13InchM4: ["iPad16,5", "iPad16,6"]
+        case .iPadPro11InchM5: ["iPad17,1", "iPad17,2"]
+        case .iPadPro13InchM5: ["iPad17,3", "iPad17,4"]
         case .iPadAir11InchM2: ["iPad14,8", "iPad14,9"]
         case .iPadAir13InchM2: ["iPad14,10", "iPad14,11"]
+        case .iPadAir11InchM3: ["iPad15,3", "iPad15,4"]
+        case .iPadAir13InchM3: ["iPad15,5", "iPad15,6"]
+        case .iPadAir11InchM4: ["iPad16,8", "iPad16,9"]
+        case .iPadAir13InchM4: ["iPad16,10", "iPad16,11"]
         }
     }
 }
@@ -144,7 +158,8 @@ class DeviceTests: XCTestCase {
                 "iPhone12,3", "iPhone12,5", "iPhone12,8", "iPhone13,1", "iPhone13,2", "iPhone13,3",
                 "iPhone13,4", "iPhone14,4", "iPhone14,5", "iPhone14,2", "iPhone14,3", "iPhone14,6",
                 "iPhone14,7", "iPhone14,8", "iPhone15,2", "iPhone15,3", "iPhone15,4", "iPhone15,5",
-                "iPhone16,1", "iPhone16,2", "iPhone17,1", "iPhone17,2", "iPhone17,3", "iPhone17,4"]
+                "iPhone16,1", "iPhone16,2", "iPhone17,1", "iPhone17,2", "iPhone17,3", "iPhone17,4",
+                "iPhone17,5", "iPhone18,1", "iPhone18,2", "iPhone18,3", "iPhone18,4", "iPhone18,5"]
     }()
 
     let iPodTypes: [String] = {
@@ -163,7 +178,10 @@ class DeviceTests: XCTestCase {
                 "iPad13,16", "iPad13,17", "iPad13,4", "iPad13,5", "iPad13,6", "iPad13,7",
                 "iPad14,3", "iPad14,4", "iPad13,8", "iPad13,9", "iPad13,10", "iPad13,11",
                 "iPad14,5", "iPad14,6", "iPad16,3", "iPad16,4", "iPad16,5", "iPad16,6",
-                "iPad14,8", "iPad14,9", "iPad14,10", "iPad14,11"]
+                "iPad14,8", "iPad14,9", "iPad14,10", "iPad14,11",
+                "iPad15,3", "iPad15,4", "iPad15,5", "iPad15,6", "iPad15,7", "iPad15,8",
+                "iPad16,1", "iPad16,2", "iPad16,8", "iPad16,9", "iPad16,10", "iPad16,11",
+                "iPad17,1", "iPad17,2", "iPad17,3", "iPad17,4"]
     }
 
     func testCurrentDevice() {
@@ -205,7 +223,7 @@ class DeviceTests: XCTestCase {
     }
 
     func testDeviceTypeAllCases() {
-        XCTAssertEqual(DeviceType.allCases.count, 92)
+        XCTAssertEqual(DeviceType.allCases.count, 106)
 
         for type in DeviceType.allCases {
             XCTAssertFalse(type.displayName.isEmpty)
