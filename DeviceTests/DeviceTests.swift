@@ -85,6 +85,9 @@ private extension DeviceType {
         case .iPhone17Pro: ["iPhone18,1"]
         case .iPhone17ProMax: ["iPhone18,2"]
         case .iPhone17e: ["iPhone18,5"]
+        case .iPhone18Pro: ["iPhone19,2"]
+        case .iPhone18ProMax: ["iPhone19,3", "iPhone19,7"]
+        case .iPhoneDuo: ["iPhone19,4"]
 
         case .iPodTouch1G: ["iPod1,1"]
         case .iPodTouch2G: ["iPod2,1"]
@@ -159,7 +162,8 @@ class DeviceTests: XCTestCase {
                 "iPhone13,4", "iPhone14,4", "iPhone14,5", "iPhone14,2", "iPhone14,3", "iPhone14,6",
                 "iPhone14,7", "iPhone14,8", "iPhone15,2", "iPhone15,3", "iPhone15,4", "iPhone15,5",
                 "iPhone16,1", "iPhone16,2", "iPhone17,1", "iPhone17,2", "iPhone17,3", "iPhone17,4",
-                "iPhone17,5", "iPhone18,1", "iPhone18,2", "iPhone18,3", "iPhone18,4", "iPhone18,5"]
+                "iPhone17,5", "iPhone18,1", "iPhone18,2", "iPhone18,3", "iPhone18,4", "iPhone18,5",
+                "iPhone19,2", "iPhone19,3", "iPhone19,4", "iPhone19,7"]
     }()
 
     let iPodTypes: [String] = {
@@ -222,8 +226,26 @@ class DeviceTests: XCTestCase {
         XCTAssertEqual(emptyDevice, DeviceType.notAvailable)
     }
 
+    func testUnrecognizedDeviceIsNamedByItsIdentifier() {
+
+        // Derived without the Mirror walk `currentIdentifier` uses, so this stays an
+        // independent check on it rather than a comparison against itself.
+        var systemInfo = utsname()
+        uname(&systemInfo)
+        let machineIdentifier = withUnsafeBytes(of: systemInfo.machine) { bytes in
+            String(decoding: bytes.prefix { $0 != 0 }, as: UTF8.self)
+        }
+
+        XCTAssertFalse(machineIdentifier.isEmpty)
+        XCTAssertEqual(DeviceType.currentIdentifier, machineIdentifier)
+
+        let unrecognized = DeviceType(identifier: "iPhone999,999")
+        XCTAssertEqual(unrecognized, DeviceType.notAvailable)
+        XCTAssertEqual(unrecognized.displayName, machineIdentifier)
+    }
+
     func testDeviceTypeAllCases() {
-        XCTAssertEqual(DeviceType.allCases.count, 106)
+        XCTAssertEqual(DeviceType.allCases.count, 109)
 
         for type in DeviceType.allCases {
             XCTAssertFalse(type.displayName.isEmpty)

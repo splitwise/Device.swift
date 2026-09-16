@@ -89,6 +89,11 @@ public enum DeviceType: String, CaseIterable {
 
     case iPhone17e
 
+    case iPhone18Pro
+    case iPhone18ProMax
+
+    case iPhoneDuo
+
     case iPodTouch1G
     case iPodTouch2G
     case iPodTouch3G
@@ -155,6 +160,11 @@ public enum DeviceType: String, CaseIterable {
 
     /// The current device type
     public static var current: DeviceType {
+        DeviceType(identifier: currentIdentifier)
+    }
+
+    /// The `uname` machine identifier of the device in use, such as `iPhone19,2`
+    internal static var currentIdentifier: String {
 
         var systemInfo = utsname()
         uname(&systemInfo)
@@ -169,12 +179,17 @@ public enum DeviceType: String, CaseIterable {
             }
         }
 
-        return DeviceType(identifier: identifier)
+        return identifier
     }
 
     // MARK: Variables
 
     /// The display name of the device type
+    ///
+    /// A device with no case in this enum reports its raw `uname` identifier instead, such as
+    /// `iPhone19,2`, so hardware released after the last update to this file still identifies
+    /// itself. `init(identifier:)` is internal, so `notAvailable` only ever reaches a caller by
+    /// way of `current`; the running device's identifier is therefore always the one it stands for.
     public var displayName: String {
         switch self {
         case .iPhone2G: "iPhone 2G"
@@ -229,6 +244,9 @@ public enum DeviceType: String, CaseIterable {
         case .iPhone17Pro: "iPhone 17 Pro"
         case .iPhone17ProMax: "iPhone 17 Pro Max"
         case .iPhone17e: "iPhone 17e"
+        case .iPhone18Pro: "iPhone 18 Pro"
+        case .iPhone18ProMax: "iPhone 18 Pro Max"
+        case .iPhoneDuo: "iPhone Duo"
 
         case .iPodTouch1G: "iPod Touch"
         case .iPodTouch2G: "iPod Touch (2nd generation)"
@@ -290,7 +308,7 @@ public enum DeviceType: String, CaseIterable {
         case .iPadPro13InchM5: "iPad Pro 13-inch (M5)"
 
         case .simulator: "Simulator"
-        case .notAvailable: "Not Available"
+        case .notAvailable: DeviceType.currentIdentifier
         }
     }
 
@@ -353,6 +371,9 @@ public enum DeviceType: String, CaseIterable {
         case .iPhone17Pro: ["iPhone18,1"]
         case .iPhone17ProMax: ["iPhone18,2"]
         case .iPhone17e: ["iPhone18,5"]
+        case .iPhone18Pro: ["iPhone19,2"]
+        case .iPhone18ProMax: ["iPhone19,3", "iPhone19,7"]
+        case .iPhoneDuo: ["iPhone19,4"]
 
         case .iPodTouch1G: ["iPod1,1"]
         case .iPodTouch2G: ["iPod2,1"]

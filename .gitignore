@@ -43,3 +43,9 @@ xcuserdata
 Carthage/Checkouts
 
 Carthage/Build
+
+# Swift Package Manager
+#
+# Build products and the dependency cache, plus the index store SourceKit-LSP writes
+# whenever the package is opened in an editor.
+.build/
